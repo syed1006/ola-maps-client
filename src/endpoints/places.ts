@@ -11,7 +11,7 @@ export class Places {
     }
 
     async autocomplete(req: PlacesAutoCompleteRequest) {
-        const url = `"/places/v1/autocomplete"`;
+        const url = "/places/v1/autocomplete";
         return await this.client.get(url, {
             params: {
                 ...req,
@@ -21,7 +21,7 @@ export class Places {
     }
 
     async details(req: PlacesDetailsRequest) {
-        const url = `"/places/v1/details"`;
+        const url = "/places/v1/details";
         return await this.client.get(url, {
             params: {
                 place_id: req.place_id,
@@ -31,7 +31,7 @@ export class Places {
     }
 
     async advancedDetails(req: PlacesDetailsRequest) {
-        const url = `"/places/v1/details/advanced"`;
+        const url = "/places/v1/details/advanced";
         return await this.client.get(url, {
             params: {
                 place_id: req.place_id,
